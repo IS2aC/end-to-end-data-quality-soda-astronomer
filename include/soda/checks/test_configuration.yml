@@ -1,0 +1,19 @@
+data_source:
+  type: snowflake
+  connection:
+    username: JohnDoeLearner
+    password: ${SNOWFLAKE_PASSWORD}
+    account: mycompany.europe-central1.aws
+    database: SALES_DATA
+    warehouse: ANALYTICS_WH
+    role: DATA_ENGINEER
+    client_session_keep_alive: true
+    session_parameters:
+      QUERY_TAG: john-doe-queries
+      QUOTED_IDENTIFIERS_IGNORE_CASE: false
+    schema: REPORTING
+
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: abc12345-6789-def0-ghij-klmnopqrstuv
+  api_key_secret: my-super-secure-api-key

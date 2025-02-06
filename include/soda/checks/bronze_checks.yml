@@ -1,0 +1,53 @@
+#check over bronze's table
+for each dataset T:
+  datasets:
+    - green
+    - yellow
+  checks:
+    - schema:
+        fail:
+          when required column missing: [DATE, TAXI, EXTRA, MTA_TAX, VENDORID, RATECODEID, TIP_AMOUNT, AIRPORT_FEE, FARE_AMOUNT, DOLOCATIONID, PULOCATIONID, PAYMENT_TYPE, TOLLS_AMOUNT, TRIP_DISTANCE, PASSENGER_COUNT, 
+          STORE_AND_FWD_FLAG, CONGESTION_SURCHARGE, TPEP_PICKUP_DATETIME, IMPROVEMENT_SURCHARGE, TPEP_DROPOFF_DATETIME]
+    - missing_percent(DATE) < 10:
+        name: Check rate of null values in DATE
+    - missing_percent(TAXI) < 10:
+        name: Check rate of null values in TAXI
+    - missing_percent(EXTRA) < 10:
+        name: Check rate of null values in EXTRA
+    - missing_percent(MTA_TAX) < 10:
+        name: Check rate of null values in MTA_TAX
+    - missing_percent(VENDORID) < 10:
+        name: Check rate of null values in VENDORID
+    - missing_percent(RATECODEID) < 10:
+        name: Check rate of null values in RATECODEID
+    - missing_percent(TIP_AMOUNT) < 10:
+        name: Check rate of null values in TIP_AMOUNT
+    - missing_percent(AIRPORT_FEE) < 10:
+        name: Check rate of null values in AIRPORT_FEE
+    - missing_percent(FARE_AMOUNT) < 10:
+        name: Check rate of null values in FARE_AMOUNT
+    - missing_percent(DOLOCATIONID) < 10:
+        name: Check rate of null values in DOLOCATIONID
+    - missing_percent(PULOCATIONID) < 10:
+        name: Check rate of null values in PULOCATIONID
+    - missing_percent(PAYMENT_TYPE) < 10:
+        name: Check rate of null values in PAYMENT_TYPE
+    - missing_percent(TOLLS_AMOUNT) < 10:
+        name: Check rate of null values in TOLLS_AMOUNT
+    - missing_percent(TRIP_DISTANCE) < 10:
+        name: Check rate of null values in TRIP_DISTANCE
+    - missing_percent(PASSENGER_COUNT) < 10:
+        name: Check rate of null values in PASSENGER_COUNT
+    - missing_percent(STORE_AND_FWD_FLAG) < 10:
+        name: Check rate of null values in STORE_AND_FWD_FLAG
+    - missing_percent(CONGESTION_SURCHARGE) < 10:
+        name: Check rate of null values in CONGESTION_SURCHARGE
+    - missing_percent(TPEP_PICKUP_DATETIME) < 10:
+        name: Check rate of null values in TPEP_PICKUP_DATETIME
+    - missing_percent(IMPROVEMENT_SURCHARGE) < 10:
+        name: Check rate of null values in IMPROVEMENT_SURCHARGE
+    - missing_percent(TPEP_DROPOFF_DATETIME) < 10:
+        name: Check rate of null values in TPEP_DROPOFF_DATETIME
+
+
+

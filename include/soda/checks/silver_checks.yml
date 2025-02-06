@@ -1,0 +1,51 @@
+#check over silver's table
+checks for silver_dim_taxi:
+  - missing_percent(TAXI_ID) = 0:
+      name: Check rate of null values in dim_taxi
+  - missing_percent(TAXI) = 0:
+      name: Check rate of null values in dim_taxi
+
+checks for silver_dim_passenger_count:
+  - missing_percent(PASSENGER_COUNT_ID) = 0:
+      name: Check rate of null values in dim_passenger_count
+  - missing_percent(PASSENGER_COUNT) = 0:
+      name: Check rate of null values in dim_passenger_count
+
+checks for silver_dim_date:
+  - missing_percent(DATE_ID) = 0:
+      name: Check rate of null values in dim_date
+  - missing_percent(FULL_DATE) = 0:
+      name: Check rate of null values in dim_date
+  - invalid_percent(MONTH) = 0:
+      valid values : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      name: Ensure month values are valid in dim_date
+  - invalid_percent(DAY) = 0:
+      valid values :  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+      name: Ensure day values are valid in dim_date
+
+checks for silver_dim_payment_type:
+  - missing_percent(PAYMENT_TYPE) = 0:
+      name: Check rate of null values in dim_payment_type
+  - missing_percent(NAME) = 0:
+      name: Check rate of null values in dim_payment_type
+
+checks for silver_dim_location:
+  - missing_percent(LOCATIONID) = 0:
+      name: Check rate of null values in dim_location
+  - missing_percent(ZONENAME) = 0:
+      name: Check rate of null values in dim_location
+  - missing_percent(BOROUGH) = 0:
+      name: Check rate of null values in dim_location
+  - missing_percent(SERVICEZONE) = 0:
+      name: Check rate of null values in dim_location
+  - missing_percent(AFFLUENCERATING) = 0:
+      name: Check rate of null values in dim_location
+
+
+
+
+
+
+
+
+
