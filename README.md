@@ -15,7 +15,7 @@
 ### Prerequisites:
 To successfully complete this project, it’s necessary to install the following tools in advance:
 
-<i class="fa-brands fa-docker"></i> DOCKER → Download link
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> DOCKER → Download link
 ASTRO CLI → Download link
 AIRBYTE CLOUD ACCOUNT (Free 14 days) → Link to Airbyte
 SODA CLOUD ACCOUNT (Free 30 days) → Link to Soda
